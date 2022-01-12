@@ -1,0 +1,30 @@
+[2022-01-11 17:34] Hello
+First random note
+
+[2022-01-12 10:00] Problem with python venv
+@python @pip
+
+I have problem with creating venv with following error
+
+`Error: Command '['.../bin/python3.9', '-Im', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1.`
+
+
+Looks like it debian/ubuntu problem 
+https://bugs.launchpad.net/ubuntu/+source/python3.4/+bug/1290847
+
+
+To solve it create venv with ` --clear --without-pip `
+
+`python3.9 -m venv --clear --without-pip my-vene`
+
+
+I don't understand it, right now I have pip from my other python3.6
+According to documentation 
+
+`https://docs.python.org/3/library/venv.html`
+
+`Skips installing or upgrading pip in the virtual environment (pip is bootstrapped by default)`
+
+And one more thing it calls ensurepip when this option is not provided
+
+`Unless the --without-pip option is given, ensurepip will be invoked to bootstrap pip into the virtual environment.`
