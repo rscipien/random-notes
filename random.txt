@@ -28,3 +28,26 @@ According to documentation
 And one more thing it calls ensurepip when this option is not provided
 
 `Unless the --without-pip option is given, ensurepip will be invoked to bootstrap pip into the virtual environment.`
+
+[2022-02-07 13:25] Pandas group by like json_Agg
+@pandas @groupby
+
+To get list from not grouped column You need to use `apply` and `list` with selected column to aggregate
+```
+aaaa = df.groupby(['tag_id'])['col2'].apply(list)
+```
+
+Full example
+
+```
+d = {'tag_id': [222, 222, 3333,3333], 'col2': ['abc', 'cde', 'xxxxx', 'yyyyy']}
+df = pd.DataFrame(data=d)
+aaaa = df.groupby(['tag_id'])['col2'].apply(list)
+```
+
+Output
+```
+tag_id
+222         [abc, cde]
+3333    [xxxxx, yyyyy]
+```
