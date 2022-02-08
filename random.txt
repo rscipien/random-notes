@@ -51,3 +51,30 @@ tag_id
 222         [abc, cde]
 3333    [xxxxx, yyyyy]
 ```
+
+[2022-02-08 13:46] [2022-02-08 13:44] Postgres inner loop with LATERAL
+@postgresql
+
+In postgrsql we have nice feature. We can use inner loops
+
+```
+for x in xxx:
+        for y in yyy:
+                -- we can do someting like this
+```
+
+For example can convert row to rows
+
+col1 col2 col3
+aa   bb   cc
+
+we can transfer into
+
+col1 aa
+col2 bb
+col3 cc
+
+
+```
+select key, value from table c, lateral json_each(row_to_json(c))
+```
