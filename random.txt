@@ -78,3 +78,13 @@ col3 cc
 ```
 select key, value from table c, lateral json_each(row_to_json(c))
 ```
+
+[2022-02-18 17:32] Python ABC class
+@python
+
+This class is to check wheter dervived class during creation has all metohd implemented
+It's in beetwen static language and dynaminc laguage type check
+
+Normali we would get exeption during calling method that given object doen't have it
+It maye be that this metod will be called in some situations and not catched in production
+Creating object generaly are before calling metohds :) so we shold see error earlier
