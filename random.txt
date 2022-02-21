@@ -88,3 +88,12 @@ It's in beetwen static language and dynaminc laguage type check
 Normali we would get exeption during calling method that given object doen't have it
 It maye be that this metod will be called in some situations and not catched in production
 Creating object generaly are before calling metohds :) so we shold see error earlier
+
+[2022-02-21 15:57] Docker clean all grabage
+@docker
+
+Over time docker can store a lot of information to remove all use
+
+```
+docker system prune -a --volumes
+```
