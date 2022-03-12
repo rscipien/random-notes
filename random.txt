@@ -97,3 +97,12 @@ Over time docker can store a lot of information to remove all use
 ```
 docker system prune -a --volumes
 ```
+
+[2022-03-12 16:47] Run any python
+@pytohn @docker
+
+docker run --rm --interactive --tty python:3.8.8 /bin/bash
+
+Run docker with mounted folder using volume
+
+docker run --rm --interactive --tty --volume /home/rafal/projct:/usr/src/code python:3.8.8 /bin/bash
