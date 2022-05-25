@@ -106,3 +106,13 @@ docker run --rm --interactive --tty python:3.8.8 /bin/bash
 Run docker with mounted folder using volume
 
 docker run --rm --interactive --tty --volume /home/rafal/projct:/usr/src/code python:3.8.8 /bin/bash
+
+[2022-05-19 10:34] Type hitns error python 3.8
+In version 3.9 it was added to allow type hint on `list`
+In prevoius wersion it was done
+	```from typings import List```A
+
+From pyton 3.9 `list` [pep-0585]
+
+[1] https://www.python.org/dev/peps/pep-0484/
+[pep-0585] https://www.python.org/dev/peps/pep-0585/
